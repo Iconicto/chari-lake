@@ -25,7 +25,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET', 'changeme')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG') != 'True'
 
-ALLOWED_HOSTS = ['www.charilake.lk', 'charilake.lk', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['www.charilakehotel.lk', 'charilakehotel.lk', '127.0.0.1', '0.0.0.0']
 
 
 # Application definition
