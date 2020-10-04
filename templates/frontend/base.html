@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Chari Lake</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
+    {% block css %}{% endblock %}
+</head>
+<body>
+    {% include 'frontend/partial/navbar.html' %}
+    {% block content %}{% endblock %}
+    {% include 'frontend/partial/footer.html' %}
+    {% block js %}{% endblock %}
+    <script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
+    <script src="https://kit.fontawesome.com/2242222cb3.js" crossorigin="anonymous"></script>
+</body>
+</html>

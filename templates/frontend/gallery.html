@@ -1,0 +1,28 @@
+{% extends 'frontend/base.html' %}
+
+{% load static %}
+{% block content %}
+    <section class="section">
+      <div class="container">
+        <h1 class="title is-2 is-size-3-mobile mb-3">
+          Gallery
+        </h1>
+        <div class="columns is-multiline" id="gallery">
+          <!-- Append images -->
+        </div>
+      </div>
+    </section>
+    <div class="modal" id="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image is-4by3">
+          <img id="modal-image" alt="" />
+        </p>
+      </div>
+      <button
+        class="modal-close is-large"
+        aria-label="close"
+        onclick="closeImage()"
+      ></button>
+    </div>
+{% endblock %}

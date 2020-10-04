@@ -3,32 +3,32 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, "index.html")
+    return render(request, "frontend/index.html", context={"homepage": True})
 
 
 def about(request):
-    return render(request, "about.html")
+    return render(request, "frontend/about.html")
 
 
 def activities(request):
-    return render(request, "activities.html")
+    return render(request, "frontend/activities.html")
 
 
 def attractions(request):
-    return render(request, "attractions.html")
+    return render(request, "frontend/attractions.html")
 
 
 def contact_us(request):
-    return render(request, "contact-us.html")
+    return render(request, "frontend/contact-us.html")
 
 
 def excursions(request):
-    return render(request, "excursions.html")
+    return render(request, "frontend/excursions.html")
 
 
 def gallery(request):
-    return render(request, "gallery.html")
+    return render(request, "frontend/gallery.html")
 
 
 def reservation(request):
-    return render(request, "reservation.html")
+    return render(request, "frontend/reservation.html")

@@ -5,5 +5,5 @@ WORKDIR app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .
-RUN ["chmod", "+x", "/app/.github/production/docker-entrypoint.sh"]
-CMD '/app/.github/production/docker-entrypoint.sh'
+RUN ["chmod", "+x", "/app/docker-entrypoint.sh"]
+CMD '/app/docker-entrypoint.sh'
