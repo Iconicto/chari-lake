@@ -14,19 +14,43 @@
                 <li>Home</li>
             </div>
         </a>
-        <a class="navbar-links-solid" href="{% url 'attractions' %}">
+        <a class="navbar-links-solid" href="{% url 'about' %}">
             <div class="link-holder">
                 <i class="fas fa-inbox link-icons"></i>
                 <li>About</li>
             </div>
         </a>
+        <a class="navbar-links-solid" href="{% url 'activities' %}">
+            <div class="link-holder">
+                <i class="fas fa-hiking link-icons"></i>
+                <li>Activities</li>
+            </div>
+        </a>
+{#        <a class="navbar-links-solid" href="{% url 'attractions' %}">#}
+{#            <div class="link-holder">#}
+{#                <i class="fas fa-inbox link-icons"></i>#}
+{#                <li>Attractions</li>#}
+{#            </div>#}
+{#        </a>#}
+{#        <a class="navbar-links-solid" href="{% url 'excursions' %}">#}
+{#            <div class="link-holder">#}
+{#                <i class="fas fa-briefcase link-icons"></i>#}
+{#                <li>Excursions</li>#}
+{#            </div>#}
+{#        </a>#}
         <a class="navbar-links-solid" href="{% url 'gallery' %}">
             <div class="link-holder">
-                <i class="fas fa-briefcase link-icons"></i>
+                <i class="fas fa-camera-retro link-icons"></i>
                 <li>Gallery</li>
             </div>
         </a>
-        <a class="navbar-links-solid" href="">
+        <a class="navbar-links-solid" href="{% url 'reservation' %}">
+            <div class="link-holder">
+                <i class="fas fa-calendar-alt link-icons"></i>
+                <li>Reservation</li>
+            </div>
+        </a>
+        <a class="navbar-links-solid" href="{% url 'contact_us' %}">
             <div class="link-holder">
                 <i class="fas fa-envelope link-icons"></i>
                 <li>Contact</li>
