@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET', 'changeme')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG') != 'True'
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = ['www.charilakehotel.lk', 'charilakehotel.lk', '127.0.0.1', '0.0.0.0']
 
@@ -145,7 +145,7 @@ if os.getenv('S3_ACCESS_KEY_ID'):
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
     STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'ChariLake/static'),
+        os.path.join(BASE_DIR, 'static'),
     ]
     AWS_S3_CUSTOM_DOMAIN = os.getenv('CDN_ENDPOINT')
     STATIC_URL = 'https://%s/%s/' % (os.getenv('CDN_ENDPOINT'), AWS_LOCATION)
