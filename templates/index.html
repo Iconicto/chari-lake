@@ -1,0 +1,405 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Charilake</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
+    <script
+            src="https://kit.fontawesome.com/2242222cb3.js"
+            crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+<nav class="navigation-bar transparent" id="navbar">
+      <span class="nav-toggle" id="js-nav-toggle">
+        <i class="fas fa-bars"></i>
+      </span>
+    <div class="logo">
+        <a href="{% url 'home' %}">
+            <img src="https://cdn.iconicto.com/ChariLake/img/logo.png" class="logo-image" id="logo"/>
+        </a>
+    </div>
+    <ul id="js-menu">
+        <a class="navbar-links" href="">
+            <div class="link-holder">
+                <i class="fas fa-home link-icons"></i>
+                <li>Home</li>
+            </div>
+        </a>
+        <a class="navbar-links" href="{% url 'attractions' %}">
+            <div class="link-holder">
+                <i class="fas fa-inbox link-icons"></i>
+                <li>About</li>
+            </div>
+        </a>
+        <a class="navbar-links" href="{% url 'gallery' %}">
+            <div class="link-holder">
+                <i class="fas fa-briefcase link-icons"></i>
+                <li>Gallery</li>
+            </div>
+        </a>
+        <a class="navbar-links" href="./{% url 'contact_us' %}">
+            <div class="link-holder">
+                <i class="fas fa-envelope link-icons"></i>
+                <li>Contact</li>
+            </div>
+        </a>
+    </ul>
+</nav>
+
+<section
+        class="hero is-large is-fullheight is-primary is-bold hero-image"
+        id="hero"
+>
+    <img class="hero-background" src="https://cdn.iconicto.com/ChariLake/img/hero-image.png"/>
+    <div class="hero-body pgx-large">
+        <div class="container">
+            <h2
+                    class="subtitle is-size-6-mobile is-bold has-text-weight-semibold letter-space"
+            >
+                YOUR PLACE TO RELAX
+            </h2>
+            <h1 class="title is-1 is-size-4-mobile has-text-weight-medium">
+                An exquisite trip you'll rave <br class="text-breaker"/>
+                about to your friends
+            </h1>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="columns is-vcentered is-variable">
+            <div class="column pr-5">
+                <h1 class="title is-size-4-mobile mb-3">
+                    Transcend Beyond Relaxation & Luxury
+                </h1>
+                <p class="has-text-justified is-size-7-mobile mb-4">
+                    Chari lake a perfect getaway, a soothing ambience, romantic
+                    setting overlooking the beautiful koggala lake. A contemporary
+                    boutique hotel designed exquisitely and exclusively for your
+                    comfort. Experience the typical Sri Lankan hospitality with all
+                    it’s luxuries amidst the unspoiled village setting with nature in
+                    her wonder.
+                </p>
+                <a href="{% url 'about' %}">
+                    <button class="button is-primary mt-5 px-4 py-5">
+                        View More&nbsp;&nbsp;<i class="fas fa-angle-right"></i>
+                    </button>
+                </a>
+            </div>
+            <div class="column">
+                <figure class="image is-3by2">
+                    <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/fisher.jpg"/>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="columns is-vcentered is-mobile mb-2">
+            <div class="column">
+                <h1 class="title is-size-4-mobile">
+                    Attractions
+                </h1>
+            </div>
+            <div class="column is-narrow">
+              <a href="attractions.html">
+                <button class="button is-primary mt-5 px-4 py-5">
+                  View More&nbsp;&nbsp;<i class="fas fa-angle-right"></i>
+                </button>
+              </a>
+            </div>
+        </div>
+        <div class="columns is-4">
+            <div class="column">
+                <figure class="image is-square image-overlay">
+                    <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/attractions/rooms.jpg"/>
+                    <div class="tint-overlay"></div>
+                    <div class="column centered">
+                        <i class="fas fa-3x fa-home"></i>
+                        <div class="subtitle is-4 has-text-white has-text-weight-bold">
+                            Rooms
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="column">
+                <figure class="image is-square image-overlay">
+                    <img
+                            class="rounded-corners"
+                            src="https://cdn.iconicto.com/ChariLake/img/attractions/viewingdecks.jpg"
+                    />
+                    <div class="tint-overlay"></div>
+                    <div class="column centered">
+                        <i class="fas fa-3x fa-binoculars"></i>
+                        <div class="subtitle is-4 has-text-white has-text-weight-bold">
+                            Viewing<br/>Decks
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="column">
+                <figure class="image is-square image-overlay">
+                    <img
+                            class="rounded-corners"
+                            src="https://cdn.iconicto.com/ChariLake/img/attractions/cuisine.jpg"
+                    />
+                    <div class="tint-overlay"></div>
+                    <div class="column centered">
+                        <i class="fas fa-3x fa-utensils"></i>
+                        <div class="subtitle is-4 has-text-white has-text-weight-bold">
+                            Cuisine
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="column">
+                <figure class="image is-square image-overlay">
+                    <img
+                            class="rounded-corners"
+                            src="https://cdn.iconicto.com/ChariLake/img/attractions/structure.jpg"
+                    />
+                    <div class="tint-overlay"></div>
+                    <div class="column centered">
+                        <i class="fas fa-3x fa-torii-gate"></i>
+                        <div class="subtitle is-4 has-text-white has-text-weight-bold">
+                            Structure
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="columns is-vcentered">
+            <div class="column">
+                <figure class="image is-3by2">
+                    <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/fisher.jpg"/>
+                </figure>
+            </div>
+            <div class="column pl-5">
+                <h1 class="title is-size-4-mobile mb-3">
+                    Activities
+                </h1>
+                <p class="has-text-justified mb-4 is-size-7-mobile">
+                    Never a time to get bored with the awesome activities we have on
+                    offer, boat rides, kayaking, nature strolls and cycling are on
+                    offer. Enjoy these adventurous activities in your leisure time at
+                    your convenience.
+                </p>
+              <a href="{% url 'activities' %}">
+                <button class="button is-primary mt-5 px-4 py-5">
+                  View More&nbsp;&nbsp;<i class="fas fa-angle-right"></i>
+                </button>
+              </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-vcentered is-mobile mb-2">
+      <div class="column">
+        <h1 class="title is-size-4-mobile">
+          Excursions
+        </h1>
+      </div>
+      <div class="column is-narrow">
+        <a href="{% url 'excursions' %}">
+          <button class="button is-primary mt-5 px-4 py-5">
+            View More&nbsp;&nbsp;<i class="fas fa-angle-right"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="columns is-4">
+      <div class="column">
+        <figure class="image is-square image-overlay">
+          <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/excursions/whalewatching.jpg"/>
+          <div class="tint-overlay"></div>
+          <div class="column centered">
+            <i class="fas fa-3x fa-fish"></i>
+            <div class="subtitle is-4 has-text-white has-text-weight-bold">
+              Whale<br/>Watch
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="column">
+        <figure class="image is-square image-overlay">
+          <img
+                  class="rounded-corners"
+                  src="https://cdn.iconicto.com/ChariLake/img/excursions/gallefort.jpg"
+          />
+          <div class="tint-overlay"></div>
+          <div class="column centered">
+            <i class="fas fa-3x fa-umbrella-beach"></i>
+            <div class="subtitle is-4 has-text-white has-text-weight-bold">
+              Galle<br/>Fort
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="column">
+        <figure class="image is-square image-overlay">
+          <img
+                  class="rounded-corners"
+                  src="https://cdn.iconicto.com/ChariLake/img/excursions/koggalalake.jpg"
+          />
+          <div class="tint-overlay"></div>
+          <div class="column centered">
+            <i class="fas fa-3x fa-water"></i>
+            <div class="subtitle is-4 has-text-white has-text-weight-bold">
+              Koggala<br/>Lake
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="column">
+        <figure class="image is-square image-overlay">
+          <img
+                  class="rounded-corners"
+                  src="https://cdn.iconicto.com/ChariLake/img/excursions/yala.jpg"
+          />
+          <div class="tint-overlay"></div>
+          <div class="column centered">
+            <i class="fas fa-3x fa-paw"></i>
+            <div class="subtitle is-4 has-text-white has-text-weight-bold">
+              Yala
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer mt-6">
+    <div class="columns is-2">
+        <div class="column is-offset-1-desktop">
+            <article class="media">
+                <figure class="media-left">
+                    <p class="image is-64x64">
+                        <img src=https://cdn.iconicto.com/ChariLake/img/logo.png"/>
+                    </p>
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <h1
+                                class="subtitle is-size-7 letter-space has-text-white has-text-weight-bold is-uppercase m-0 p-0"
+                        >
+                            Address
+                        </h1>
+                        <p class="mt-2 has-text-link">
+                            Charilake Boutique Hotel,<br/>
+                            Harumalgoda, Habaraduwa, Galle, Sri Lanka.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="column">
+            <h1
+                    class="subtitle is-size-7 letter-space has-text-white has-text-weight-bold is-uppercase"
+            >
+                Drop us a line
+            </h1>
+            <p class="title is-3 has-text-weight-semibold has-text-link">
+                hello@charilake.lk
+            </p>
+        </div>
+    </div>
+
+    <div class="columns is-2 mt-1">
+        <div class="column is-offset-1-desktop">
+            <h1
+                    class="subtitle is-size-7 letter-space has-text-white has-text-weight-bold is-uppercase m-0 p-0"
+            >
+                Information
+            </h1>
+            <div class="columns mt-1">
+                <div class="column">
+                    <a
+                            class="has-text-link has-text-weight-medium footer-link"
+                            href="{% url 'about' %}"
+                    >About</a
+                    ><br/>
+                    <a
+                            class="has-text-link has-text-weight-medium footer-link"
+                            href="attractions.html"
+                    >Attractions</a
+                    ><br/>
+                    <a
+                            class="has-text-link has-text-weight-medium footer-link"
+                            href="{% url 'activities' %}"
+                    >Activities</a
+                    >
+                </div>
+                <div class="column">
+                    <a
+                            class="has-text-link has-text-weight-medium footer-link"
+                            href="{% url 'excursions' %}"
+                    >Excursions</a
+                    ><br/>
+                    <a
+                            class="has-text-link has-text-weight-medium footer-link"
+                            href="gallery.html"
+                    >Gallery</a
+                    ><br/>
+                    <a
+                            class="has-text-link has-text-weight-medium footer-link"
+                            href="{% url 'reservation' %}"
+                    >Reservation</a
+                    >
+                </div>
+                <div class="column">
+                    <a
+                            class="has-text-link has-text-weight-medium footer-link"
+                            href="{% url 'contact_us' %}"
+                    >Contact</a
+                    ><br/>
+                </div>
+            </div>
+        </div>
+        <div class="column mt-1">
+            <h1
+                    class="subtitle is-size-7 letter-space has-text-white has-text-weight-bold is-uppercase"
+            >
+                Follow us
+            </h1>
+            <div class="columns is-3 is-mobile">
+                <div class="column is-narrow">
+                    <p class="title has-text-cyan has-text-weight-medium">
+                <span class="icon">
+                  <i class="fab fa-instagram has-text-link"></i>
+                </span>
+                    </p>
+                </div>
+                <div class="column is-narrow">
+                    <p class="title has-text-cyan has-text-weight-medium">
+                <span class="icon">
+                  <i class="fab fa-facebook-f has-text-link"></i>
+                </span>
+                    </p>
+                </div>
+                <div class="column is-narrow">
+                    <p class="title has-text-cyan has-text-weight-medium">
+                <span class="icon">
+                  <i class="fab fa-twitter has-text-link"></i>
+                </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
+</body>
+</html>

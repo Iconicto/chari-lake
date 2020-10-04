@@ -1,0 +1,226 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Charilake</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <script
+      src="https://kit.fontawesome.com/2242222cb3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navigation-bar solid alternate-nav" id="navbar">
+      <span class="nav-toggle" id="js-nav-toggle">
+        <i class="fas fa-bars"></i>
+      </span>
+      <div class="logo">
+        <a href="{% url 'home' %}">
+          <img src="https://cdn.iconicto.com/ChariLake/img/logo-blue.png" class="logo-image" id="logo" />
+        </a>
+      </div>
+      <ul id="js-menu">
+        <a class="navbar-links-solid" href="{% url 'home' %}">
+          <div class="link-holder">
+            <i class="fas fa-home link-icons"></i>
+            <li>Home</li>
+          </div>
+        </a>
+        <a class="navbar-links-solid" href="{% url 'attractions' %}">
+          <div class="link-holder">
+            <i class="fas fa-inbox link-icons"></i>
+            <li>About</li>
+          </div>
+        </a>
+        <a class="navbar-links-solid" href="{% url 'gallery' %}">
+          <div class="link-holder">
+            <i class="fas fa-briefcase link-icons"></i>
+            <li>Gallery</li>
+          </div>
+        </a>
+        <a class="navbar-links-solid" href="">
+          <div class="link-holder">
+            <i class="fas fa-envelope link-icons"></i>
+            <li>Contact</li>
+          </div>
+        </a>
+      </ul>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <h1 class="title is-3 is-size-4-mobile">Our Story</h1>
+      </div>
+      <div class="columns is-vcentered is-variable mt-1">
+        <div class="column pr-5">
+          <p class="has-text-justified is-size-7-mobile">
+            Set beside the verdant greenery, lush vegetation and the spectacular
+            Koggala Lake, Chari Lake offers an experience that is like no other.
+            Just a 90 minute drive from Colombo it can also be accessed in 15
+            minutes by a domestic flight to Koggala. This contemporary boutique
+            hotel consists of 10 exquisitely designed rooms and 2 suites.
+            Elegantly designed with timber and polished cement structures this
+            eco-destination offers an experience that will give you a sense of
+            satisfaction and sanctity. The boutique is opulent in design and
+            offers a life changing experience. Luxurious elegance overlooking
+            the Koggala Lake is a sight to experience. The hotel itself is
+            surrounded by water ponds and gives the impression of a floating
+            paradise. This one of a kind resort is destined to give you a sense
+            of Euphoria. Kudos is all that you can think of once you experience
+            the hospitality and class that is on offer.
+          </p>
+        </div>
+        <div class="column">
+          <figure class="image is-3by2">
+            <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/fisher.jpg" />
+          </figure>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <div class="content">
+          <p class="has-text-justified is-size-7-mobile">
+            Chari or the traveler, a word originating from Sinhalese and
+            Sanskrit, offers a wonderful experience that is harmonious with the
+            name of the resort. Travel around or just lay back and enjoy the
+            serenity and tranquility this unique destination has to offer.
+            Excellence emanates from every aspect of this marvelous resort.
+          </p>
+          <p class="has-text-justified is-size-7-mobile">
+            Mother nature’s bountifulness is prevalent in abundance in this
+            glorious environment which is certain to make this experience a
+            memorable one. The open areas with breathtaking view offer a sense
+            of relaxation and ecstasy.
+          </p>
+          <p class="has-text-justified is-size-7-mobile">
+            Take a dip and relax in the spaciously designed pool or just
+            freestyle your way to enjoyment. Lay back relax and enjoy the
+            panoramic view of the Koggala lake. Our professional, courteous and
+            hospitable staff will always make you feel welcome and homely.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer mt-6">
+      <div class="columns is-2">
+        <div class="column is-offset-1-desktop">
+          <article class="media">
+            <figure class="media-left">
+              <p class="image is-64x64">
+                <img src=https://cdn.iconicto.com/ChariLake/img/logo.png" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1
+                  class="subtitle is-size-7 letter-space has-text-white has-text-weight-bold is-uppercase m-0 p-0"
+                >
+                  Address
+                </h1>
+                <p class="mt-2 has-text-link">
+                  Charilake Boutique Hotel,<br />
+                  Harumalgoda, Habaraduwa, Galle, Sri Lanka.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column">
+          <h1
+            class="subtitle is-size-7 letter-space has-text-white has-text-weight-bold is-uppercase"
+          >
+            Drop us a line
+          </h1>
+          <p class="title is-3 has-text-weight-semibold has-text-link">
+            hello@charilake.lk
+          </p>
+        </div>
+      </div>
+
+      <div class="columns is-2 mt-1">
+        <div class="column is-offset-1-desktop">
+          <h1
+            class="subtitle is-size-7 letter-space has-text-white has-text-weight-bold is-uppercase m-0 p-0"
+          >
+            Information
+          </h1>
+          <div class="columns mt-1">
+            <div class="column">
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="{% url 'about' %}"
+                >About</a
+              ><br />
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="attractions.html"
+                >Attractions</a
+              ><br />
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="{% url 'activities' %}"
+                >Activities</a
+              >
+            </div>
+            <div class="column">
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="{% url 'excursions' %}"
+                >Excursions</a
+              ><br />
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="gallery.html"
+                >Gallery</a
+              ><br />
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="{% url 'reservation' %}"
+                >Reservation</a
+              >
+            </div>
+            <div class="column">
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="{% url 'contact_us' %}"
+                >Contact</a
+              ><br />
+            </div>
+          </div>
+        </div>
+        <div class="column mt-1">
+          <h1
+            class="subtitle is-size-7 letter-space has-text-white has-text-weight-bold is-uppercase"
+          >
+            Follow us
+          </h1>
+          <div class="columns is-3 is-mobile">
+            <div class="column is-narrow">
+              <p class="title has-text-cyan has-text-weight-medium">
+                <span class="icon">
+                  <i class="fab fa-instagram has-text-link"></i>
+                </span>
+              </p>
+            </div>
+            <div class="column is-narrow">
+              <p class="title has-text-cyan has-text-weight-medium">
+                <span class="icon">
+                  <i class="fab fa-facebook-f has-text-link"></i>
+                </span>
+              </p>
+            </div>
+            <div class="column is-narrow">
+              <p class="title has-text-cyan has-text-weight-medium">
+                <span class="icon">
+                  <i class="fab fa-twitter has-text-link"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

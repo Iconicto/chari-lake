@@ -1,0 +1,336 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Charilake</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <script
+      src="https://kit.fontawesome.com/2242222cb3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navigation-bar solid alternate-nav" id="navbar">
+      <span class="nav-toggle" id="js-nav-toggle">
+        <i class="fas fa-bars"></i>
+      </span>
+      <div class="logo">
+        <a href="{% url 'home' %}">
+          <img src="https://cdn.iconicto.com/ChariLake/img/logo-blue.png" class="logo-image" id="logo" />
+        </a>
+      </div>
+      <ul id="js-menu">
+        <a class="navbar-links-solid" href="{% url 'home' %}">
+          <div class="link-holder">
+            <i class="fas fa-home link-icons"></i>
+            <li>Home</li>
+          </div>
+        </a>
+        <a class="navbar-links-solid" href="{% url 'attractions' %}">
+          <div class="link-holder">
+            <i class="fas fa-inbox link-icons"></i>
+            <li>About</li>
+          </div>
+        </a>
+        <a class="navbar-links-solid" href="{% url 'gallery' %}">
+          <div class="link-holder">
+            <i class="fas fa-briefcase link-icons"></i>
+            <li>Gallery</li>
+          </div>
+        </a>
+        <a class="navbar-links-solid" href="">
+          <div class="link-holder">
+            <i class="fas fa-envelope link-icons"></i>
+            <li>Contact</li>
+          </div>
+        </a>
+      </ul>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <h1 class="title is-2 is-size-3-mobile mb-3">
+          Activities
+        </h1>
+        <div class="columns is-vcentered mt-3">
+          <div class="column">
+            <figure class="image is-3by2">
+              <img
+                src="https://cdn.iconicto.com/ChariLake/img/activities/boatriding.jpg"
+                class="rounded-image"
+              />
+            </figure>
+          </div>
+          <div class="column">
+            <h1 class="title is-3 is-size-4-mobile mb-3">
+              Boat Riding
+            </h1>
+            <p class="has-text-justified is-size-7-mobile">
+              Enjoy a boat ride on the Koggala Lake. Situated in the backyard of
+              Chari Lake the boats can be birthed right into the hotel. Rides
+              are maneuvered by experienced boatmen to ensure your safety at all
+              times.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <h1 class="title is-3 is-size-4-mobile mb-3">
+              Kayaking
+            </h1>
+            <p class="has-text-justified is-size-7-mobile">
+              Take a kayak and roam the Koggala lake, enjoy the magnificent
+              awe-inspiring sights of the lake at your own convenience.
+            </p>
+          </div>
+          <div class="column">
+            <figure class="image is-3by2">
+              <img src="https://cdn.iconicto.com/ChariLake/img/activities/kayaking.jpg" class="rounded-image" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <figure class="image is-3by2">
+              <img
+                src="https://cdn.iconicto.com/ChariLake/img/activities/naturescrolls.jpg"
+                class="rounded-image"
+              />
+            </figure>
+          </div>
+          <div class="column">
+            <h1 class="title is-3 is-size-4-mobile mb-3">
+              Nature Strolls
+            </h1>
+            <p class="has-text-justified is-size-7-mobile">
+              Feel your lungs inflate with the fresh air whilst listening to the
+              harmonious sound of the birds as you enjoy the serenity of the
+              lake.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <h1 class="title is-3 is-size-4-mobile mb-3">
+              Cycling
+            </h1>
+            <p class="has-text-justified is-size-7-mobile">
+              Cycle through the lush greenery and foliage using safe equipment.
+            </p>
+          </div>
+          <div class="column">
+            <figure class="image is-3by2">
+              <img src="https://cdn.iconicto.com/ChariLake/img/activities/cycling.jpg" class="rounded-image" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <figure class="image is-3by2">
+              <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/activities/fishing.jpg" />
+            </figure>
+          </div>
+          <div class="column">
+            <h1 class="title is-3 is-size-4-mobile mb-3">
+              Fishing
+            </h1>
+            <p class="has-text-justified is-size-7-mobile">
+              Fishing at Chari Lake is a pleasure like no other, get hooked on
+              and try out your skills at this activity of entertainment, which
+              is bound to keep you on the edge of your seat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <h1 class="title is-3 is-size-4-mobile mb-3">
+              Weddings
+            </h1>
+            <p class="has-text-justified is-size-7-mobile">
+              Sri Lanka is progressing fast as a destination for weddings. Chari
+              Lake offers you the best destination, services, and amenities to
+              plan this very special moment of your life. Spacious open areas
+              and scenic beauty assures you of a memorable day.
+            </p>
+          </div>
+          <div class="column">
+            <figure class="image is-3by2">
+              <img src="https://cdn.iconicto.com/ChariLake/img/activities/weddings.jpg" class="rounded-image" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <figure class="image is-3by2">
+              <img
+                class="rounded-corners"
+                src="https://cdn.iconicto.com/ChariLake/img/activities/honeymooners.jpg"
+              />
+            </figure>
+          </div>
+          <div class="column">
+            <h1 class="title is-3 is-size-4-mobile mb-3">
+              Honeymooners
+            </h1>
+            <p class="has-text-justified is-size-7-mobile">
+              An ideal getaway Chari lake offers an isolated experience like no
+              other. Lose yourself in the privacy of this vast area of land that
+              is scenic and secluded. Our specially designed tree hideouts will
+              make you one with nature.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer mt-6">
+      <div class="columns is-2">
+        <div class="column is-offset-1-desktop">
+          <article class="media">
+            <figure class="media-left">
+              <p class="image is-64x64">
+                <img src=https://cdn.iconicto.com/ChariLake/img/logo.png" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1
+                  class="subtitle is-size-7 letter-space has-text-white has-text-weight-bold is-uppercase m-0 p-0"
+                >
+                  Address
+                </h1>
+                <p class="mt-2 has-text-link">
+                  Charilake Boutique Hotel,<br />
+                  Harumalgoda, Habaraduwa, Galle, Sri Lanka.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column">
+          <h1
+            class="subtitle is-size-7 letter-space has-text-white has-text-weight-bold is-uppercase"
+          >
+            Drop us a line
+          </h1>
+          <p class="title is-3 has-text-weight-semibold has-text-link">
+            hello@charilake.lk
+          </p>
+        </div>
+      </div>
+
+      <div class="columns is-2 mt-1">
+        <div class="column is-offset-1-desktop">
+          <h1
+            class="subtitle is-size-7 letter-space has-text-white has-text-weight-bold is-uppercase m-0 p-0"
+          >
+            Information
+          </h1>
+          <div class="columns mt-1">
+            <div class="column">
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="{% url 'about' %}"
+                >About</a
+              ><br />
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="attractions.html"
+                >Attractions</a
+              ><br />
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="{% url 'activities' %}"
+                >Activities</a
+              >
+            </div>
+            <div class="column">
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="{% url 'excursions' %}"
+                >Excursions</a
+              ><br />
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="gallery.html"
+                >Gallery</a
+              ><br />
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="{% url 'reservation' %}"
+                >Reservation</a
+              >
+            </div>
+            <div class="column">
+              <a
+                class="has-text-link has-text-weight-medium footer-link"
+                href="{% url 'contact_us' %}"
+                >Contact</a
+              ><br />
+            </div>
+          </div>
+        </div>
+        <div class="column mt-1">
+          <h1
+            class="subtitle is-size-7 letter-space has-text-white has-text-weight-bold is-uppercase"
+          >
+            Follow us
+          </h1>
+          <div class="columns is-3 is-mobile">
+            <div class="column is-narrow">
+              <p class="title has-text-cyan has-text-weight-medium">
+                <span class="icon">
+                  <i class="fab fa-instagram has-text-link"></i>
+                </span>
+              </p>
+            </div>
+            <div class="column is-narrow">
+              <p class="title has-text-cyan has-text-weight-medium">
+                <span class="icon">
+                  <i class="fab fa-facebook-f has-text-link"></i>
+                </span>
+              </p>
+            </div>
+            <div class="column is-narrow">
+              <p class="title has-text-cyan has-text-weight-medium">
+                <span class="icon">
+                  <i class="fab fa-twitter has-text-link"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
+  </body>
+</html>

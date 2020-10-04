@@ -153,3 +153,6 @@ if os.getenv('S3_ACCESS_KEY_ID'):
 
 else:
     STATIC_URL = '/static/'
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static'),
+    ]
