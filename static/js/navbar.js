@@ -92,11 +92,11 @@ navBarToggle.addEventListener("click", function() {
 });
 
 function setBlueLogo() {
-  logo.src = "https://cdn.iconicto.com/ChariLake/img/logo-blue.png";
+  logo.src = blueLogo;
 }
 
 function setWhiteLogo() {
-  logo.src = "https://cdn.iconicto.com/ChariLake/img/logo.png";
+  logo.src = whiteLogo;
 }
 
 function setSolidNavBar() {
