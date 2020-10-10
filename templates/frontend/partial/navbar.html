@@ -9,41 +9,47 @@
             </a>
         </div>
         <ul id="js-menu">
-            <a class="navbar-links-solid" href="{% url 'home' %}">
+            <li>
+                <a class="navbar-links-solid" href="{% url 'home' %}">
+                    <div class="link-holder">
+                        <i class="fas fa-home link-icons"></i> Home
+                    </div>
+                </a>
+            </li>
+            <li><a class="navbar-links-solid" href="{% url 'about' %}">
                 <div class="link-holder">
-                    <i class="fas fa-home link-icons"></i>
-                    <li>Home</li>
+                    <i class="fas fa-inbox link-icons"></i> About
                 </div>
             </a>
-            <a class="navbar-links-solid" href="{% url 'about' %}">
+            </li>
+            <li>
+                <a class="navbar-links-solid" href="{% url 'activities' %}">
                 <div class="link-holder">
-                    <i class="fas fa-inbox link-icons"></i>
-                    <li>About</li>
+                    <i class="fas fa-hiking link-icons"></i> Activities
                 </div>
             </a>
-            <a class="navbar-links-solid" href="{% url 'activities' %}">
+            </li>
+            <li>
+                <a class="navbar-links-solid" href="{% url 'gallery' %}">
                 <div class="link-holder">
-                    <i class="fas fa-hiking link-icons"></i>
-                    <li>Activities</li>
+                    <i class="fas fa-camera-retro link-icons"></i> Gallery
                 </div>
             </a>
-            <a class="navbar-links-solid" href="{% url 'gallery' %}">
+            </li>
+            <li>
+                <a class="navbar-links-solid" href="{% url 'reservation' %}">
                 <div class="link-holder">
-                    <i class="fas fa-camera-retro link-icons"></i>
-                    <li>Gallery</li>
+                    <i class="fas fa-calendar-alt link-icons"></i> Reservation
                 </div>
             </a>
-            <a class="navbar-links-solid" href="{% url 'reservation' %}">
+            </li>
+            <li>
+                <a class="navbar-links-solid" href="{% url 'contact_us' %}">
                 <div class="link-holder">
-                    <i class="fas fa-calendar-alt link-icons"></i>
-                    <li>Reservation</li>
+                    <i class="fas fa-envelope link-icons"></i> Contact
                 </div>
             </a>
-            <a class="navbar-links-solid" href="{% url 'contact_us' %}">
-                <div class="link-holder">
-                    <i class="fas fa-envelope link-icons"></i>
-                    <li>Contact</li>
-                </div>
-            </a>
-        </ul>
+            </li>
+        </ul
+        >
     </nav>
