@@ -7,7 +7,7 @@
         <img class="hero-background" src="{% static 'img/homepage/hero-image.jpg' %}"/>
         <div class="hero-body pgx-large">
             <div class="container">
-                <h2 class="subtitle is-size-6-mobile is-bold has-text-weight-semibold letter-space" >
+                <h2 class="subtitle is-size-6-mobile is-bold has-text-weight-semibold letter-space">
                     YOUR PLACE TO RELAX
                 </h2>
                 <h1 class="title is-1 is-size-4-mobile has-text-weight-medium">
@@ -39,7 +39,16 @@
                 </div>
                 <div class="column">
                     <figure class="image is-3by2">
-                        <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/fisher.jpg"/>
+                        <img class="rounded-corners slides" src="{% static 'img/homepage/pool-side-view.jpg' %}"
+                             alt="pool side view">
+                        <img class="rounded-corners slides" src="{% static 'img/homepage/pool.jpeg' %}" alt="pool">
+                        <img class="rounded-corners slides" src="{% static 'img/homepage/yard.jpg' %}" alt="yard">
+
+                        <div class="has-text-centered container my-2 dot-holder">
+                            <span class="dot" onclick="gotToSlide(1)"></span>
+                            <span class="dot" onclick="gotToSlide(2)"></span>
+                            <span class="dot" onclick="gotToSlide(3)"></span>
+                        </div>
                     </figure>
                 </div>
             </div>
@@ -54,17 +63,18 @@
                     </h1>
                 </div>
                 <div class="column is-narrow">
-                  <a href="{% url 'attractions' %}">
-                    <button class="button is-primary mt-5 px-4 py-5">
-                      View More&nbsp;&nbsp;<i class="fas fa-angle-right"></i>
-                    </button>
-                  </a>
+                    <a href="{% url 'attractions' %}">
+                        <button class="button is-primary mt-5 px-4 py-5">
+                            View More&nbsp;&nbsp;<i class="fas fa-angle-right"></i>
+                        </button>
+                    </a>
                 </div>
             </div>
             <div class="columns is-4">
                 <div class="column">
                     <figure class="image is-square image-overlay">
-                        <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/attractions/rooms.jpg"/>
+                        <img class="rounded-corners"
+                             src="https://cdn.iconicto.com/ChariLake/img/attractions/rooms.jpg"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-home"></i>
@@ -76,7 +86,8 @@
                 </div>
                 <div class="column">
                     <figure class="image is-square image-overlay">
-                        <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/attractions/viewingdecks.jpg" />
+                        <img class="rounded-corners"
+                             src="https://cdn.iconicto.com/ChariLake/img/attractions/viewingdecks.jpg"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-binoculars"></i>
@@ -88,7 +99,8 @@
                 </div>
                 <div class="column">
                     <figure class="image is-square image-overlay">
-                        <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/attractions/cuisine.jpg" />
+                        <img class="rounded-corners"
+                             src="https://cdn.iconicto.com/ChariLake/img/attractions/cuisine.jpg"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-utensils"></i>
@@ -100,7 +112,8 @@
                 </div>
                 <div class="column">
                     <figure class="image is-square image-overlay">
-                        <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/attractions/structure.jpg" />
+                        <img class="rounded-corners"
+                             src="https://cdn.iconicto.com/ChariLake/img/attractions/structure.jpg"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-torii-gate"></i>
@@ -131,82 +144,124 @@
                         offer. Enjoy these adventurous activities in your leisure time at
                         your convenience.
                     </p>
-                  <a href="{% url 'activities' %}">
-                    <button class="button is-primary mt-5 px-4 py-5">
-                      View More&nbsp;&nbsp;<i class="fas fa-angle-right"></i>
-                    </button>
-                  </a>
+                    <a href="{% url 'activities' %}">
+                        <button class="button is-primary mt-5 px-4 py-5">
+                            View More&nbsp;&nbsp;<i class="fas fa-angle-right"></i>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="columns is-vcentered is-mobile mb-2">
-          <div class="column">
-            <h1 class="title is-size-4-mobile">
-              Excursions
-            </h1>
-          </div>
-          <div class="column is-narrow">
-            <a href="{% url 'excursions' %}">
-              <button class="button is-primary mt-5 px-4 py-5">
-                View More&nbsp;&nbsp;<i class="fas fa-angle-right"></i>
-              </button>
-            </a>
-          </div>
+        <div class="container">
+            <div class="columns is-vcentered is-mobile mb-2">
+                <div class="column">
+                    <h1 class="title is-size-4-mobile">
+                        Excursions
+                    </h1>
+                </div>
+                <div class="column is-narrow">
+                    <a href="{% url 'excursions' %}">
+                        <button class="button is-primary mt-5 px-4 py-5">
+                            View More&nbsp;&nbsp;<i class="fas fa-angle-right"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="columns is-4">
+                <div class="column">
+                    <figure class="image is-square image-overlay">
+                        <img class="rounded-corners"
+                             src="https://cdn.iconicto.com/ChariLake/img/excursions/whalewatching.jpg"/>
+                        <div class="tint-overlay"></div>
+                        <div class="column centered">
+                            <i class="fas fa-3x fa-fish"></i>
+                            <div class="subtitle is-4 has-text-white has-text-weight-bold">
+                                Whale<br/>Watch
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="column">
+                    <figure class="image is-square image-overlay">
+                        <img class="rounded-corners"
+                             src="https://cdn.iconicto.com/ChariLake/img/excursions/gallefort.jpg"/>
+                        <div class="tint-overlay"></div>
+                        <div class="column centered">
+                            <i class="fas fa-3x fa-umbrella-beach"></i>
+                            <div class="subtitle is-4 has-text-white has-text-weight-bold">
+                                Galle<br/>Fort
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="column">
+                    <figure class="image is-square image-overlay">
+                        <img class="rounded-corners"
+                             src="https://cdn.iconicto.com/ChariLake/img/excursions/koggalalake.jpg"/>
+                        <div class="tint-overlay"></div>
+                        <div class="column centered">
+                            <i class="fas fa-3x fa-water"></i>
+                            <div class="subtitle is-4 has-text-white has-text-weight-bold">
+                                Koggala<br/>Lake
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="column">
+                    <figure class="image is-square image-overlay">
+                        <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/excursions/yala.jpg"/>
+                        <div class="tint-overlay"></div>
+                        <div class="column centered">
+                            <i class="fas fa-3x fa-paw"></i>
+                            <div class="subtitle is-4 has-text-white has-text-weight-bold">
+                                Yala
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
         </div>
-        <div class="columns is-4">
-          <div class="column">
-            <figure class="image is-square image-overlay">
-              <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/excursions/whalewatching.jpg"/>
-              <div class="tint-overlay"></div>
-              <div class="column centered">
-                <i class="fas fa-3x fa-fish"></i>
-                <div class="subtitle is-4 has-text-white has-text-weight-bold">
-                  Whale<br/>Watch
-                </div>
-              </div>
-            </figure>
-          </div>
-          <div class="column">
-            <figure class="image is-square image-overlay">
-              <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/excursions/gallefort.jpg" />
-              <div class="tint-overlay"></div>
-              <div class="column centered">
-                <i class="fas fa-3x fa-umbrella-beach"></i>
-                <div class="subtitle is-4 has-text-white has-text-weight-bold">
-                  Galle<br/>Fort
-                </div>
-              </div>
-            </figure>
-          </div>
-          <div class="column">
-            <figure class="image is-square image-overlay">
-              <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/excursions/koggalalake.jpg" />
-              <div class="tint-overlay"></div>
-              <div class="column centered">
-                <i class="fas fa-3x fa-water"></i>
-                <div class="subtitle is-4 has-text-white has-text-weight-bold">
-                  Koggala<br/>Lake
-                </div>
-              </div>
-            </figure>
-          </div>
-          <div class="column">
-            <figure class="image is-square image-overlay">
-              <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/excursions/yala.jpg" />
-              <div class="tint-overlay"></div>
-              <div class="column centered">
-                <i class="fas fa-3x fa-paw"></i>
-                <div class="subtitle is-4 has-text-white has-text-weight-bold">
-                  Yala
-                </div>
-              </div>
-            </figure>
-          </div>
-        </div>
-      </div>
     </section>
+{% endblock %}
+
+{% block js %}
+    <script>
+        let slideIndex = 1;
+
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+            setTimeout(function () {
+                nextSlide(1)
+            }, 5000)
+        }
+
+        function gotToSlide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            let i;
+            const x = document.getElementsByClassName("slides");
+            const dots = document.getElementsByClassName("dot");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active-slide", "");
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" has-background-white", "");
+            }
+            x[slideIndex - 1].className += " active-slide";
+            dots[slideIndex - 1].className += " has-background-white";
+        }
+
+        nextSlide()
+    </script>
 {% endblock %}
