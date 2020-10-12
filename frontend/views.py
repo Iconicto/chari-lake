@@ -32,3 +32,11 @@ def gallery(request):
 
 def reservation(request):
     return render(request, "frontend/reservation.html")
+
+
+def room_chari_deluxe(request):
+    return render(request, "frontend/rooms/chari-deluxe.html")
+
+
+def room_family_deluxe(request):
+    return render(request, "frontend/rooms/family-deluxe.html")
