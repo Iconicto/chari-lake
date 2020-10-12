@@ -4,7 +4,7 @@
 {% block css %}{% endblock %}
 {% block content %}
     <section class="hero is-large is-fullheight is-primary is-bold hero-image" id="hero">
-        <img class="hero-background" src="https://cdn.iconicto.com/ChariLake/img/hero-image.png"/>
+        <img class="hero-background" src="{% static 'img/homepage/hero-image.jpg' %}"/>
         <div class="hero-body pgx-large">
             <div class="container">
                 <h2 class="subtitle is-size-6-mobile is-bold has-text-weight-semibold letter-space" >
@@ -31,7 +31,7 @@
                         it’s luxuries amidst the unspoiled village setting with nature in
                         her wonder.
                     </p>
-                    <a href="{% url 'activities' %}">
+                    <a href="{% url 'about' %}">
                         <button class="button is-primary mt-5 px-4 py-5">
                             View More&nbsp;&nbsp;<i class="fas fa-angle-right"></i>
                         </button>
