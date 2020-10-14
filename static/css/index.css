@@ -158,6 +158,9 @@
     right: 0;
     top: 0;
 }
+.image .is-cover{
+    object-fit: cover;
+}
 
 .button, .input, .textarea, .select select, .file-cta,
 .file-name, .pagination-previous,
@@ -12084,7 +12087,7 @@ ul li {
 }
 
 .link-holder:hover {
-    opacity: 0.5;
+    opacity: 0.9;
 }
 
 .solid {
@@ -12151,11 +12154,12 @@ i.fas {
 
 .hero-background {
     position: absolute;
-    object-fit: cover;
+    object-fit: inherit;
     object-position: center center;
     width: 100%;
     height: 100%;
 }
+
 
 .button.is-primary {
     background: #063694;
@@ -12228,6 +12232,11 @@ i.fas {
         margin-right: 0%;
         margin-left: 0%;
     }
+
+    .hero-background {
+        object-fit: cover;
+    }
+
 }
 
 @media screen and (min-width: 800px) {
@@ -12263,7 +12272,8 @@ i.fas {
     span.nav-toggle {
         display: none;
     }
-    .nav-margin{
+
+    .nav-margin {
         margin-top: 0;
     }
 }
@@ -12307,6 +12317,42 @@ i.fas {
     /*position: fixed;*/
 }
 
-.nav-margin{
+.nav-margin {
     margin-top: 100px;
+}
+
+.slides {
+    display: none;
+    transition: opacity 2s ease-out;
+    opacity: 0;
+}
+
+.active-slide {
+    opacity: 1;
+    display: block;
+}
+
+.dot {
+    height: 13px;
+    width: 13px;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #ccc !important;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.dot:hover {
+    background-color: #fff;
+}
+
+.dot-holder {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    width: 100%;
 }

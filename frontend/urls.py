@@ -1,8 +1,5 @@
 from django.urls import path
-from django.views.generic.base import RedirectView
 from . import views
-
-favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -13,5 +10,6 @@ urlpatterns = [
     path('excursions', views.excursions, name='excursions'),
     path('gallery', views.gallery, name='gallery'),
     path('reservation', views.reservation, name='reservation'),
-    path(r'^favicon\.ico$', favicon_view),
+    path('rooms/chari-deluxe', views.room_chari_deluxe, name='room_chari_deluxe'),
+    path('rooms/family-deluxe', views.room_family_deluxe, name='rooms_family_deluxe'),
 ]
