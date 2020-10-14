@@ -2,7 +2,7 @@ var modal = document.getElementById("modal");
 var selectedImg = document.getElementById("modal-image");
 var gallery = document.getElementById("gallery");
 
-setImages();
+// setImages();
 
 function showImage(src) {
   selectedImg.src = src;
@@ -14,7 +14,6 @@ function closeImage() {
   modal.classList.remove("is-active");
 }
 
-//setting images
 function setImages() {
   for (i = 1; i < 23; i++) {
     var galleryCell = document.createElement("div");
