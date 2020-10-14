@@ -40,13 +40,15 @@
                 <div class="column">
                     <figure class="image is-3by2">
                         <img class="rounded-corners slides" src="{% static 'img/homepage/pool-side-view.jpg' %}"
-                             alt="pool side view">
+                        alt="pool side view">
+                        <img class="rounded-corners slides" src="{% static 'img/homepage/front-view.jpg' %}" alt="front-view">
                         <img class="rounded-corners slides" src="{% static 'img/homepage/pool.jpeg' %}" alt="pool">
                         <img class="rounded-corners slides" src="{% static 'img/homepage/yard.jpg' %}" alt="yard">
 
                         <div class="has-text-centered container my-2 dot-holder">
                             <span class="dot" onclick="gotToSlide(1)"></span>
                             <span class="dot" onclick="gotToSlide(2)"></span>
+                            <span class="dot" onclick="gotToSlide(3)"></span>
                             <span class="dot" onclick="gotToSlide(3)"></span>
                         </div>
                     </figure>
@@ -73,8 +75,8 @@
             <div class="columns is-4">
                 <div class="column">
                     <figure class="image is-square image-overlay">
-                        <img class="rounded-corners"
-                             src="https://cdn.iconicto.com/ChariLake/img/attractions/rooms.jpg"/>
+                        <img class="rounded-corners is-cover"
+                             src="{% static 'img/attractions/room.jpg' %}" alt="room"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-home"></i>
@@ -86,8 +88,8 @@
                 </div>
                 <div class="column">
                     <figure class="image is-square image-overlay">
-                        <img class="rounded-corners"
-                             src="https://cdn.iconicto.com/ChariLake/img/attractions/viewingdecks.jpg"/>
+                        <img class="rounded-corners is-cover"
+                             src="{% static 'img/attractions/viewing-deck.jpg' %}" alt="viewing deck"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-binoculars"></i>
@@ -99,8 +101,8 @@
                 </div>
                 <div class="column">
                     <figure class="image is-square image-overlay">
-                        <img class="rounded-corners"
-                             src="https://cdn.iconicto.com/ChariLake/img/attractions/cuisine.jpg"/>
+                        <img class="rounded-corners is-cover"
+                             src="{% static 'img/attractions/cuisine.jpg' %}" alt="cuisine"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-utensils"></i>
@@ -112,8 +114,8 @@
                 </div>
                 <div class="column">
                     <figure class="image is-square image-overlay">
-                        <img class="rounded-corners"
-                             src="https://cdn.iconicto.com/ChariLake/img/attractions/structure.jpg"/>
+                        <img class="rounded-corners is-cover"
+                             src="{% static 'img/attractions/structure.jpg' %}" alt="structure"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-torii-gate"></i>
@@ -131,7 +133,7 @@
             <div class="columns is-vcentered">
                 <div class="column">
                     <figure class="image is-3by2">
-                        <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/fisher.jpg"/>
+                        <img class="rounded-corners is-cover" src="{% static 'img/activities/boat-trip.jpg' %}" alt="fishing"/>
                     </figure>
                 </div>
                 <div class="column pl-5">
@@ -173,21 +175,8 @@
             <div class="columns is-4">
                 <div class="column">
                     <figure class="image is-square image-overlay">
-                        <img class="rounded-corners"
-                             src="https://cdn.iconicto.com/ChariLake/img/excursions/whalewatching.jpg"/>
-                        <div class="tint-overlay"></div>
-                        <div class="column centered">
-                            <i class="fas fa-3x fa-fish"></i>
-                            <div class="subtitle is-4 has-text-white has-text-weight-bold">
-                                Whale<br/>Watch
-                            </div>
-                        </div>
-                    </figure>
-                </div>
-                <div class="column">
-                    <figure class="image is-square image-overlay">
-                        <img class="rounded-corners"
-                             src="https://cdn.iconicto.com/ChariLake/img/excursions/gallefort.jpg"/>
+                        <img class="rounded-corners is-cover"
+                             src="{% static 'img/excursions/galle-fort.jpg' %}" alt="galle-fort"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-umbrella-beach"></i>
@@ -199,8 +188,21 @@
                 </div>
                 <div class="column">
                     <figure class="image is-square image-overlay">
-                        <img class="rounded-corners"
-                             src="https://cdn.iconicto.com/ChariLake/img/excursions/koggalalake.jpg"/>
+                        <img class="rounded-corners is-cover"
+                             src="{% static 'img/excursions/whales-watching.png' %}" alt="whales-watching"/>
+                        <div class="tint-overlay"></div>
+                        <div class="column centered">
+                            <i class="fas fa-3x fa-fish"></i>
+                            <div class="subtitle is-4 has-text-white has-text-weight-bold">
+                                Whale<br/>Watch
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="column">
+                    <figure class="image is-square image-overlay">
+                        <img class="rounded-corners is-cover"
+                             src="{% static 'img/excursions/koggla-lake.jpg' %}" alt="koggla-lake"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-water"></i>
@@ -212,7 +214,7 @@
                 </div>
                 <div class="column">
                     <figure class="image is-square image-overlay">
-                        <img class="rounded-corners" src="https://cdn.iconicto.com/ChariLake/img/excursions/yala.jpg"/>
+                        <img class="rounded-corners is-cover" src="{% static 'img/excursions/yala.jpg' %}" alt="yala"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-paw"></i>
@@ -229,7 +231,7 @@
 
 {% block js %}
     <script>
-        let slideIndex = 1;
+        let slideIndex = Math.floor(Math.random() * 4) + 1;
 
         function nextSlide() {
             showSlide(slideIndex += 1);

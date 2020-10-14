@@ -158,6 +158,9 @@
     right: 0;
     top: 0;
 }
+.image .is-cover{
+    object-fit: cover;
+}
 
 .button, .input, .textarea, .select select, .file-cta,
 .file-name, .pagination-previous,
