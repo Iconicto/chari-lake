@@ -1,5 +1,5 @@
-from django.http import HttpResponse
 from django.shortcuts import render
+import os
 
 
 def home(request):
@@ -27,7 +27,8 @@ def excursions(request):
 
 
 def gallery(request):
-    return render(request, "frontend/gallery.html")
+    images = os.listdir("static/img/gallery")
+    return render(request, "frontend/gallery.html", context={"images": sorted(images)})
 
 
 def reservation(request):
