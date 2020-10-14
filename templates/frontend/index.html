@@ -39,17 +39,17 @@
                 </div>
                 <div class="column">
                     <figure class="image is-3by2">
-                        <img class="rounded-corners slides" src="{% static 'img/homepage/pool-side-view.jpg' %}"
+                        <img class="rounded-corners slides is-cover" src="{% static 'img/homepage/pool-side-view.jpg' %}"
                         alt="pool side view">
-                        <img class="rounded-corners slides" src="{% static 'img/homepage/front-view.jpg' %}" alt="front-view">
-                        <img class="rounded-corners slides" src="{% static 'img/homepage/pool.jpeg' %}" alt="pool">
-                        <img class="rounded-corners slides" src="{% static 'img/homepage/yard.jpg' %}" alt="yard">
+                        <img class="rounded-corners slides is-cover" src="{% static 'img/homepage/front-view.jpg' %}" alt="front-view">
+                        <img class="rounded-corners slides is-cover" src="{% static 'img/homepage/pool.jpeg' %}" alt="pool">
+                        <img class="rounded-corners slides is-cover" src="{% static 'img/homepage/yard.jpg' %}" alt="yard">
 
                         <div class="has-text-centered container my-2 dot-holder">
                             <span class="dot" onclick="gotToSlide(1)"></span>
                             <span class="dot" onclick="gotToSlide(2)"></span>
                             <span class="dot" onclick="gotToSlide(3)"></span>
-                            <span class="dot" onclick="gotToSlide(3)"></span>
+                            <span class="dot" onclick="gotToSlide(4)"></span>
                         </div>
                     </figure>
                 </div>
@@ -233,14 +233,10 @@
     <script>
         let slideIndex = Math.floor(Math.random() * 4) + 1;
 
-        function nextSlide() {
-            showSlide(slideIndex += 1);
-            setTimeout(function () {
-                nextSlide(1)
-            }, 5000)
-        }
+        let slideshow;
 
         function gotToSlide(n) {
+            clearTimeout(slideshow);
             showSlide(slideIndex = n);
         }
 
@@ -262,8 +258,11 @@
             }
             x[slideIndex - 1].className += " active-slide";
             dots[slideIndex - 1].className += " has-background-white";
+            slideshow = setTimeout(function () {
+                showSlide(slideIndex += 1);
+            }, 5000)
         }
 
-        nextSlide()
+        gotToSlide(2)
     </script>
 {% endblock %}
