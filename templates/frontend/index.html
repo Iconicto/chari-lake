@@ -230,6 +230,53 @@
 {% endblock %}
 
 {% block js %}
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "Hotel",
+          "image": [
+            "https://cdn.iconicto.com/ChariLake/img/gallery/chari-lake-28.jpg",
+            "https://cdn.iconicto.com/ChariLake/img/gallery/chari-lake-17.jpg",
+            "https://cdn.iconicto.com/ChariLake/img/gallery/chari-lake-10.jpg"
+           ],
+          "@id": "http://charilakehotel.lk",
+          "name": "Chari Lake Hotel",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Harumalgoda",
+            "addressLocality": "Habaraduwa",
+            "addressRegion": "Galle",
+            "postalCode": "80630",
+            "addressCountry": "LK"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 6.0133466,
+            "longitude": 80.3162663
+          },
+          "url": "https://charilakehotel.lk/",
+          "telephone": "+94 91 22 81 888",
+          "priceRange": "$$$",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "05:30",
+              "closes": "23:30"
+            }
+          ],
+          "menu": "https://charilakehotel.lk/reservation",
+          "acceptsReservations": "True"
+        }
+    </script>
     <script>
         let slideIndex = Math.floor(Math.random() * 4) + 1;
 
