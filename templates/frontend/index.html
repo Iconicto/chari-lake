@@ -1,7 +1,7 @@
 {% extends 'frontend/base.html' %}
 
 {% load static %}
-{% block css %}{% endblock %}
+{% block title %}Experience Serenity at its Best - Koggala Lake, Galle | {% endblock %}
 {% block content %}
     <section class="hero is-large is-fullheight is-primary is-bold hero-image" id="hero">
         <img class="hero-background" src="{% static 'img/homepage/hero-image.jpg' %}" alt="balcony view" />
@@ -40,10 +40,10 @@
                 <div class="column">
                     <figure class="image is-3by2">
                         <img class="rounded-corners slides is-cover" src="{% static 'img/homepage/pool-side-view.jpg' %}"
-                        alt="pool side view">
-                        <img class="rounded-corners slides is-cover" src="{% static 'img/homepage/front-view.jpg' %}" alt="front-view">
-                        <img class="rounded-corners slides is-cover" src="{% static 'img/homepage/pool.jpeg' %}" alt="pool">
-                        <img class="rounded-corners slides is-cover" src="{% static 'img/homepage/yard.jpg' %}" alt="yard">
+                        alt="pool side view of the hotel">
+                        <img class="rounded-corners slides is-cover" src="{% static 'img/homepage/front-view.jpg' %}" alt="front view of chari lake">
+                        <img class="rounded-corners slides is-cover" src="{% static 'img/homepage/pool.jpeg' %}" alt="pool of chari lake">
+                        <img class="rounded-corners slides is-cover" src="{% static 'img/homepage/yard.jpg' %}" alt="yard of chari lake">
 
                         <div class="has-text-centered container my-2 dot-holder">
                             <span class="dot" onclick="gotToSlide(1)"></span>
@@ -76,7 +76,7 @@
                 <div class="column">
                     <figure class="image is-square image-overlay">
                         <img class="rounded-corners is-cover"
-                             src="{% static 'img/attractions/room.jpg' %}" alt="room"/>
+                             src="{% static 'img/attractions/room.jpg' %}" alt="family deluxe room"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-home"></i>
@@ -89,7 +89,7 @@
                 <div class="column">
                     <figure class="image is-square image-overlay">
                         <img class="rounded-corners is-cover"
-                             src="{% static 'img/attractions/viewing-deck.jpg' %}" alt="viewing deck"/>
+                             src="{% static 'img/attractions/viewing-deck.jpg' %}" alt="viewing deck of the hotel"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-binoculars"></i>
@@ -115,7 +115,7 @@
                 <div class="column">
                     <figure class="image is-square image-overlay">
                         <img class="rounded-corners is-cover"
-                             src="{% static 'img/attractions/structure.jpg' %}" alt="structure"/>
+                             src="{% static 'img/attractions/structure.jpg' %}" alt="structure of the hotel"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-torii-gate"></i>
@@ -133,7 +133,7 @@
             <div class="columns is-vcentered">
                 <div class="column">
                     <figure class="image is-3by2">
-                        <img class="rounded-corners is-cover" src="{% static 'img/activities/boat-trip.jpg' %}" alt="fishing"/>
+                        <img class="rounded-corners is-cover" src="{% static 'img/activities/boat-trip.jpg' %}" alt="boat rides in koggala lake"/>
                     </figure>
                 </div>
                 <div class="column pl-5">
@@ -189,7 +189,7 @@
                 <div class="column">
                     <figure class="image is-square image-overlay">
                         <img class="rounded-corners is-cover"
-                             src="{% static 'img/excursions/whales-watching.png' %}" alt="whales-watching"/>
+                             src="{% static 'img/excursions/whales-watching.png' %}" alt="whales watching in mirissa"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-fish"></i>
@@ -202,7 +202,7 @@
                 <div class="column">
                     <figure class="image is-square image-overlay">
                         <img class="rounded-corners is-cover"
-                             src="{% static 'img/excursions/koggla-lake.jpg' %}" alt="koggla-lake"/>
+                             src="{% static 'img/excursions/koggla-lake.jpg' %}" alt="koggla lake"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-water"></i>
@@ -214,7 +214,7 @@
                 </div>
                 <div class="column">
                     <figure class="image is-square image-overlay">
-                        <img class="rounded-corners is-cover" src="{% static 'img/excursions/yala.jpg' %}" alt="yala"/>
+                        <img class="rounded-corners is-cover" src="{% static 'img/excursions/yala.jpg' %}" alt="yala national park"/>
                         <div class="tint-overlay"></div>
                         <div class="column centered">
                             <i class="fas fa-3x fa-paw"></i>
@@ -230,6 +230,53 @@
 {% endblock %}
 
 {% block js %}
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "Hotel",
+          "image": [
+            "https://cdn.iconicto.com/ChariLake/img/gallery/chari-lake-28.jpg",
+            "https://cdn.iconicto.com/ChariLake/img/gallery/chari-lake-17.jpg",
+            "https://cdn.iconicto.com/ChariLake/img/gallery/chari-lake-10.jpg"
+           ],
+          "@id": "http://charilakehotel.lk",
+          "name": "Chari Lake Hotel",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Harumalgoda",
+            "addressLocality": "Habaraduwa",
+            "addressRegion": "Galle",
+            "postalCode": "80630",
+            "addressCountry": "LK"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 6.0133466,
+            "longitude": 80.3162663
+          },
+          "url": "https://charilakehotel.lk/",
+          "telephone": "+94 91 22 81 888",
+          "priceRange": "$$$",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "05:30",
+              "closes": "23:30"
+            }
+          ],
+          "menu": "https://charilakehotel.lk/reservation",
+          "acceptsReservations": "True"
+        }
+    </script>
     <script>
         let slideIndex = Math.floor(Math.random() * 4) + 1;
 
