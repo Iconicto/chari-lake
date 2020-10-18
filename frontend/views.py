@@ -31,8 +31,8 @@ def gallery(request):
     return render(request, "frontend/gallery.html", context={"images": sorted(images)})
 
 
-def reservation(request):
-    return render(request, "frontend/reservation.html")
+def rooms(request):
+    return render(request, "frontend/rooms.html")
 
 
 def room_chari_deluxe(request):
