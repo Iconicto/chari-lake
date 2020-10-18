@@ -9,7 +9,7 @@ urlpatterns = [
     path('contact', views.contact_us, name='contact_us'),
     path('excursions', views.excursions, name='excursions'),
     path('gallery', views.gallery, name='gallery'),
-    path('reservation', views.reservation, name='reservation'),
+    path('rooms', views.rooms, name='rooms'),
     path('rooms/chari-deluxe', views.room_chari_deluxe, name='room_chari_deluxe'),
     path('rooms/family-deluxe', views.room_family_deluxe, name='rooms_family_deluxe'),
 ]
