@@ -30,7 +30,7 @@ function setNavBar() {
     this.setTransparentNavBar();
   }
 
-  if (window.innerWidth < 800) {
+  if (window.innerWidth < 850) {
     setSolidNavBar();
     hideNavIcons();
   } else {
@@ -44,7 +44,7 @@ window.addEventListener("resize", () => {
 
 function setNavBarType() {
   width = window.innerWidth;
-  if (width < 800) {
+  if (width < 850) {
     setSolidNavBar();
     hideNavIcons();
   } else {
