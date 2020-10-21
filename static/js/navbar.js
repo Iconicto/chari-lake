@@ -6,7 +6,7 @@ let mainNav = document.getElementById("js-menu");
 let navBarToggle = document.getElementById("js-nav-toggle");
 var visibilityHeight;
 if (hero != null) {
-  visibilityHeight = hero.clientHeight / 3;
+  visibilityHeight = hero.clientHeight / 6;
 } else {
   visibilityHeight = 0;
 }
@@ -92,11 +92,11 @@ navBarToggle.addEventListener("click", function() {
 });
 
 function setBlueLogo() {
-  logo.className = logo.className.replace("-white", "-blue");
+  logo.className = logo.className.replace("logo-white", "logo-blue");
 }
 
 function setWhiteLogo() {
-  logo.className = logo.className.replace("-blue", "-white");
+  logo.className = logo.className.replace("logo-blue", "logo-white");
 }
 
 function setSolidNavBar() {
