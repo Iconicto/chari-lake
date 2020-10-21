@@ -12231,7 +12231,7 @@ i.fas {
     color: #242E87;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .button.is-primary {
         padding: 15px !important;
         margin-top: 5px !important;
@@ -12250,7 +12250,7 @@ i.fas {
 
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
     .navigation-bar {
         height: 100px;
         flex-direction: row;
@@ -12265,14 +12265,14 @@ i.fas {
         height: 80px;
     }
 
-    ul {
+    #js-menu {
         display: flex;
         justify-content: flex-end;
         width: 80%;
         flex-direction: row;
     }
 
-    ul li {
+    #js-menu li {
         display: inline-block;
         margin: 0 70px 0 0;
         text-align: left;
@@ -12286,6 +12286,16 @@ i.fas {
 
     .nav-margin {
         margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1024px)  {
+    .navigation-bar{
+        justify-content: space-between!important;
+        padding-left: 10px;
+    }
+    #js-menu{
+        justify-content: inherit;
     }
 }
 
