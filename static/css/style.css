@@ -11934,8 +11934,14 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-halfheight .hero-body, .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body {
-    align-items: center;
+    align-items: start;
     display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    /*.hero.is-halfheight .hero-body, .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body {*/
+    /*    align-items: center;*/
+    /*}*/
 }
 
 .hero.is-halfheight .hero-body > .container, .hero.is-fullheight .hero-body > .container, .hero.is-fullheight-with-navbar .hero-body > .container {
@@ -12008,7 +12014,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero-body {
     flex-grow: 1;
     flex-shrink: 0;
-    padding: 3rem 1.5rem;
+    padding: 12rem 1.5rem;
 }
 
 .section {
@@ -12154,12 +12160,17 @@ i.fas {
 
 .hero-background {
     position: absolute;
-    object-fit: inherit;
+    object-fit: cover;
     object-position: center center;
     width: 100%;
     height: 100%;
 }
 
+@media screen and (min-width: 1408px) {
+    .hero-background {
+        object-fit: fill;
+    }
+}
 
 .button.is-primary {
     background: #063694;
@@ -12229,8 +12240,8 @@ i.fas {
     }
 
     .section {
-        margin-right: 0%;
-        margin-left: 0%;
+        margin-right: 0;
+        margin-left: 0;
     }
 
     .hero-background {
