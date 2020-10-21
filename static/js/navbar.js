@@ -92,11 +92,11 @@ navBarToggle.addEventListener("click", function() {
 });
 
 function setBlueLogo() {
-  logo.src = blueLogo;
+  logo.className = logo.className.replace("-white", "-blue");
 }
 
 function setWhiteLogo() {
-  logo.src = whiteLogo;
+  logo.className = logo.className.replace("-blue", "-white");
 }
 
 function setSolidNavBar() {
@@ -104,7 +104,7 @@ function setSolidNavBar() {
   myNav.classList.remove("transparent");
   setBlueLogo();
   setLinkColor("navbar-links", "navbar-links-solid");
-  setIcons("blue");
+  // setIcons("blue");
 }
 
 function setTransparentNavBar() {
