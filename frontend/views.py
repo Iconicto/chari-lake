@@ -1,5 +1,8 @@
+import requests
 from django.shortcuts import render
 import os
+
+from frontend.helpers import create_email
 
 
 def home(request):
@@ -19,7 +22,27 @@ def attractions(request):
 
 
 def contact_us(request):
-    return render(request, "frontend/contact-us.html")
+    if request.method == 'POST':
+        try:
+            resp = requests.post(
+                "https://api.mailgun.net/v3/iconicto.com/messages",
+                auth=("api", os.getenv("MAILGUN_API_KEY")),
+                data={"from": "Iconicto Postmaster <postman@iconicto.com>",
+                      "to": "info@charilakehotel.lk",
+                      "subject": "New client inquiry via charilakehotel.lk",
+                      "text": create_email(request.POST)
+                      })
+            if resp.status_code == 200:
+                return render(request, "frontend/contact-us.html",
+                              context={"messages": [{"level": "is-success", "content": "Your inquiry was routed to management, We will reach back to you as soon as possible"}]})
+            else:
+                print(resp.text)
+                raise Exception(resp.text)
+        except:
+            return render(request, "frontend/contact-us.html",
+                          context={"messages": [{"level": "is-danger", "content": "Something went wrong, Try resubmitting or send a direct email to info@charilakehotel.lk"}]})
+    else:
+        return render(request, "frontend/contact-us.html")
 
 
 def excursions(request):
