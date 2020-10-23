@@ -23,18 +23,5 @@
         </div>
       </div>
     </section>
-    <div class="modal" id="modal">
-      <div class="modal-background" onclick="closeImage()"></div>
-      <div class="modal-content is-clipped" style="width: 60%">
-      <figure class="image is-full-desktop">
-          <img id="modal-image" alt="model image" src="">
-        </figure>
-      </div>
-      <button
-        class="modal-close is-large"
-        aria-label="close"
-        onclick="closeImage()"
-      ></button>
-    </div>
+{% include 'frontend/partial/modal.html' %}
 {% endblock %}
-{% block js %}<script type="text/javascript" src="{% static 'js/gallery.js' %}"></script>{% endblock %}

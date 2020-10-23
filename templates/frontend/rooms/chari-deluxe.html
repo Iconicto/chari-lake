@@ -4,71 +4,95 @@
 {% block title %}Chari Deluxe | {% endblock %}
 {% block content %}
 
-<section class="section nav-margin">
-    <div class="container">
-        <div class="columns is-vcentered is-variable">
-            <div class="column pr-5">
-                <h1 class="title is-size-4-mobile mb-3">
-                    Chari Deluxe
-                </h1>
-                <p class="has-text-justified is-size-7-mobile mb-4">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                    type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also
-                    the
-                    leap into electronic typesetting, remaining essentially unchanged.
-                </p>
-            </div>
-            <div class="column">
-                <figure class="image is-3by2">
-                    <img class="rounded-corners is-cover" src="{% static 'img/rooms/chari-deluxe/chari-deluxe-room.jpg' %}"
-                         alt="Chari Deluxe Room"/>
-                </figure>
+    <section class="section nav-margin">
+        <div class="container">
+            <div class="columns is-vcentered is-variable">
+                <div class="column pr-5">
+                    <h1 class="title is-size-4-mobile mb-3">
+                        Chari Deluxe
+                    </h1>
+                    <p class="has-text-justified is-size-7-mobile mb-4">
+                        Spacious rooms with a lake facing private balcony. Elegantly furnished for your comfort.
+                    </p>
+                </div>
+                <div class="column">
+                    <figure class="image is-3by2">
+                        <img class="rounded-corners is-cover is-clickable"
+                             src="{% static 'img/rooms/chari-deluxe/chari-deluxe-room.jpg' %}"
+                             alt="Chari Deluxe Room" onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section">
-    <div class="container">
-        <div class="columns is-vcentered is-mobile mb-2 mt-3">
-            <div class="column">
-                <h1 class="title is-size-4-mobile">
-                    Gallery
-                </h1>
+    <section class="section">
+        <div class="container">
+            <div class="columns is-vcentered is-mobile mb-2 mt-3">
+                <div class="column">
+                    <h1 class="title is-size-4-mobile">
+                        Gallery
+                    </h1>
+                </div>
+            </div>
+            <div class="columns is-multiline is-4">
+                <div class="column is-one-quarter">
+                    <figure class="image is-3by2 image-room is-clickable">
+                        <img class="rounded-corners is-cover" src="{% static 'img/rooms/chari-deluxe/large-bed.jpg' %}"
+                             alt="large bed" onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+                <div class="column is-one-quarter">
+                    <figure class="image is-3by2 image-room is-clickable">
+                        <img class="rounded-corners is-cover" src="{% static 'img/rooms/chari-deluxe/towels.jpg' %}"
+                             alt="towels" onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+                <div class="column  is-one-quarter">
+                    <figure class="image is-3by2 image-room is-clickable">
+                        <img class="rounded-corners is-cover"
+                             src="{% static 'img/rooms/chari-deluxe/out-side-view.jpg' %}"
+                             alt="outside view" onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+                <div class="column is-one-quarter">
+                    <figure class="image is-3by2 image-room is-clickable">
+                        <img class="rounded-corners is-cover" src="{% static 'img/rooms/chari-deluxe/tea-kit.jpg' %}"
+                             alt="tea kit" onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+
+                <div class="column is-one-quarter">
+                    <figure class="image is-3by2 image-room is-clickable">
+                        <img class="rounded-corners is-cover" src="{% static 'img/rooms/chari-deluxe/seatings.jpg' %}"
+                             alt="seatings" onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+                <div class="column is-one-quarter">
+                    <figure class="image is-3by2 image-room">
+                        <img class="rounded-corners is-cover is-clickable"
+                             src="{% static 'img/rooms/wash-room-1.jpg' %}" alt="wash room"
+                             onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+                <div class="column is-one-quarter">
+                    <figure class="image is-3by2 image-room">
+                        <img class="rounded-corners is-cover is-clickable"
+                             src="{% static 'img/rooms/wash-room-2.jpg' %}" alt="wash room"
+                             onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+                <div class="column is-one-quarter">
+                    <figure class="image is-3by2 image-room">
+                        <img class="rounded-corners is-cover is-clickable"
+                             src="{% static 'img/rooms/wash-room-3.jpg' %}" alt="wash room"
+                             onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
             </div>
         </div>
-        <div class="columns is-4">
-            <div class="column">
-                <figure class="image is-3by2 image-room">
-                    <img class="rounded-corners is-cover" src="{% static 'img/rooms/chari-deluxe/out-side-view.jpg' %}"
-                         alt="outside view"/>
-                </figure>
-            </div>
-            <div class="column">
-                <figure class="image is-3by2 image-room">
-                    <img class="rounded-corners is-cover" src="{% static 'img/rooms/chari-deluxe/tea-kit.jpg' %}"
-                         alt="tea kit"/>
-                </figure>
-            </div>
-            <div class="column">
-                <figure class="image is-3by2 image-room">
-                    <img class="rounded-corners is-cover" src="{% static 'img/rooms/chari-deluxe/toiletries.jpg' %}"
-                         alt="toiletries"/>
-                </figure>
-            </div>
-            <div class="column">
-                <figure class="image is-3by2 image-room">
-                    <img class="rounded-corners is-cover" src="{% static 'img/rooms/chari-deluxe/wash-room.jpg' %}"
-                         alt="wash room"/>
-                </figure>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-{% include 'frontend/partial/amenities.html' %}
-
+    {% include 'frontend/partial/amenities.html' %}
+    {% include 'frontend/partial/modal.html' %}
 {% endblock %}
