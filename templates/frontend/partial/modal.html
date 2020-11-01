@@ -7,6 +7,8 @@
             <img id="modal-image" alt="model image" src="">
         </figure>
     </div>
+    <a class="gallery-control prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="gallery-control next" onclick="plusSlides(1)">&#10095;</a>
     <button
             class="modal-close is-large"
             aria-label="close"
@@ -14,5 +16,10 @@
     ></button>
 </div>
 {% block js %}
+    <script>
+    const images = Array.from(document.querySelectorAll('section img')).map(function (img) {
+        return img.src
+    })
+    </script>
     <script type="text/javascript" src="{% static 'js/modal.js' %}"></script>
 {% endblock %}
