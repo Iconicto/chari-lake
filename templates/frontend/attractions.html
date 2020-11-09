@@ -46,9 +46,16 @@
                     </p>
                 </div>
                 <div class="column">
-                    <figure class="image is-3by2">
-                        <img src="{% static 'img/attractions/viewing-deck.jpg' %}" class="rounded-image" alt="viewing deck of the hotel" />
-                    </figure>
+{#                    <figure class="image is-3by2">#}
+{#                        <img src="{% static 'img/attractions/viewing-deck.jpg' %}" class="rounded-image" alt="viewing deck of the hotel" />#}
+{#                    </figure>#}
+                    <div class="container is-3by2">
+                        <video class="rounded-image" autoplay loop>
+                          <source src="{% static 'videos/viewing-deck.mp4' %}" type="video/mp4; codecs=hevc">
+                          <source src="{% static 'videos/viewing-deck.webm' %}" type="video/webm; codecs=vp9">
+                          <source src="{% static 'videos/viewing-deck-org.mp4' %}" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
             </div>
         </div>
