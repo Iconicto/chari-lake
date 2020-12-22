@@ -2,21 +2,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="keywords" content="Koggala Lake, Chari Lake, Sri Lanka, Transcend Beyond Relaxation And Luxury, Galle Fort, Whale watching, Unawatuna Beach, Yala, Uda-walawe, Cinnamon Island" />
-	<meta name="description" content="Set beside the verdant greenery, lush vegetation and the spectacular Koggala Lake, Galle, CharÌ Lake offers an experience that is like no other. Just a 90 minute drive from Colombo it can also be accessed in 15 minutes by a domestic flight to Koggala. This contemporary boutique hotel consists of exquisitely and exclusively designed 10 rooms and one suite." />
-    <title>{% block title %}{% endblock %}Chari Lake Hotel</title>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="keywords" content="Koggala Lake, Chari Lake, Sri Lanka, Transcend Beyond Relaxation And Luxury, Galle Fort, Whale watching, Unawatuna Beach, Yala, Uda-walawe, Cinnamon Island" />
+  <meta name="description" content="Set beside the verdant greenery, lush vegetation and the spectacular Koggala Lake, Galle, CharÌ Lake offers an experience that is like no other. Just a 90 minute drive from Colombo it can also be accessed in 15 minutes by a domestic flight to Koggala. This contemporary boutique hotel consists of exquisitely and exclusively designed 10 rooms and one suite." />
+  <title>{% block title %}{% endblock %}Chari Lake Hotel</title>
+  <title>{% block title %}{% endblock %}Chari Lake Hotel</title>
 
-    <link rel="icon" href="{% static 'favicon.jpg' %}" type="image/jpg">
-    <link rel="stylesheet" href="{% static 'css/style.min.css' %}" type="text/css"/>
-    {% block css %}{% endblock %}
+  <link rel="icon" href="{% static 'favicon.jpg' %}" type="image/jpg">
+  <link rel="stylesheet" href="{% static 'css/style.min.css' %}" type="text/css"/>
+  {% block css %}{% endblock %}
+  {% block css %}{% endblock %}
 
-    <link rel="preconnect dns-prefetch" href="https://cdn.iconicto.com" crossorigin>
-    <link rel="preconnect dns-prefetch" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect dns-prefetch" href="https://kit-free.fontawesome.com" crossorigin>
-    <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com" crossorigin>
+  <link rel="preconnect dns-prefetch" href="https://cdn.iconicto.com" crossorigin>
+  <link rel="preconnect dns-prefetch" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect dns-prefetch" href="https://kit-free.fontawesome.com" crossorigin>
+  <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com" crossorigin>
 </head>
 <body>
 {% include 'frontend/partial/navbar.html' %}
@@ -25,7 +27,7 @@
     {% block js %}{% endblock %}
     <script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
     <script src="https://kit.fontawesome.com/2242222cb3.js" crossorigin="anonymous"></script>
-
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5HFD24J5Q"></script>
     <script>
@@ -35,5 +37,44 @@
 
       gtag('config', 'G-D5HFD24J5Q');
     </script>
-</body>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "232616088214006");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        src="https://www.facebook.com/tr?id=232616088214006&ev=PageView
+      &noscript=1"
+      />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    
+  </body>
 </html>
