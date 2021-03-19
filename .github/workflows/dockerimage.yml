@@ -23,4 +23,4 @@ jobs:
           docker tag $IMAGE_NAME $IMAGE_NAME:build-${GITHUB_RUN_NUMBER}
           docker tag $IMAGE_NAME $IMAGE_NAME:latest
       - name: Push to docker registry
-        run: docker push $IMAGE_NAME
+        run: docker push $IMAGE_NAME --all-tags
