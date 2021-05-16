@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +28,8 @@ SECRET_KEY = os.getenv('DJANGO_SECRET', 'changeme')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['www.charilakehotel.lk', 'charilakehotel.lk', '127.0.0.1', '0.0.0.0', 'localhost']
+# ALLOWED_HOSTS = ['www.charilakehotel.lk', 'charilakehotel.lk', '127.0.0.1', '0.0.0.0', 'localhost']
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -72,7 +77,7 @@ WSGI_APPLICATION = 'ChariLake.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-if os.getenv('PGPASSWORD'):
+if os.getenv('PG_HOST'):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -84,6 +89,7 @@ if os.getenv('PGPASSWORD'):
         }
     }
 else:
+    print("DATABASE HOST was not found defaulting SQLite")
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -151,3 +157,5 @@ else:
     STATICFILES_DIRS = [
         os.path.join(BASE_DIR, 'static'),
     ]
+
+MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY")

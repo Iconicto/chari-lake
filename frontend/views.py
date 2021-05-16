@@ -1,6 +1,7 @@
 import requests
 from django.shortcuts import render
 import os
+from django.conf import settings
 
 from frontend.helpers import create_email
 
@@ -26,7 +27,7 @@ def contact_us(request):
         try:
             resp = requests.post(
                 "https://api.mailgun.net/v3/iconicto.com/messages",
-                auth=("api", os.getenv("MAILGUN_API_KEY")),
+                auth=("api", settings.MAILGUN_API_KEY),
                 data={"from": "Iconicto Postmaster <postman@iconicto.com>",
                       "to": "info@charilakehotel.lk",
                       "subject": "New client inquiry via charilakehotel.lk",

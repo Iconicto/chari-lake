@@ -14,3 +14,29 @@ Official Website of the Chari Lake Hotel
 `python3 manage.py migrate`
 - Start dev server <br>
 `python3 manage.py runserver `
+
+
+### Git Secrets
+
+#### Encrypt
+
+```bash
+gcloud kms encrypt \
+    --key "chari-lake" \
+    --keyring git-secrets \
+    --location global  \
+    --plaintext-file ".env" \
+    --ciphertext-file ".env.enc" \
+    --project "iconicto"
+```
+
+#### Decrypt
+```bash
+gcloud kms decrypt \
+    --key "chari-lake" \
+    --keyring git-secrets \
+    --location global  \
+    --plaintext-file ".env" \
+    --ciphertext-file ".env.enc" \
+    --project "iconicto"
+```
