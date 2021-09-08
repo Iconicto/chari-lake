@@ -131,31 +131,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-if os.getenv('S3_ACCESS_KEY_ID'):
-    AWS_ACCESS_KEY_ID = os.getenv('S3_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = os.getenv('S3_SECRET_ACCESS_KEY')
-    AWS_STORAGE_BUCKET_NAME = os.getenv('S3_STORAGE_BUCKET_NAME')
-    AWS_S3_ENDPOINT_URL = os.getenv('S3_ENDPOINT_URL')
-    AWS_S3_REGION_NAME = os.getenv('S3_REGION_NAME')
-    AWS_S3_OBJECT_PARAMETERS = {
-        'CacheControl': 'max-age=86400',
-        'ACL': os.getenv('DEFAULT_ACL')
-    }
-    AWS_LOCATION = 'ChariLake'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.1/howto/static-files/
+if os.getenv('GS_BUCKET_NAME'):
 
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'static'),
-    ]
-    AWS_S3_CUSTOM_DOMAIN = os.getenv('CDN_ENDPOINT')
-    STATIC_URL = 'https://%s/%s/' % (os.getenv('CDN_ENDPOINT'), AWS_LOCATION)
-    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    GS_LOCATION = 'chari-lake'
+    GS_CUSTOM_ENDPOINT = os.getenv('CDN_ENDPOINT').strip()
 
+    GS_BUCKET_NAME = os.getenv('GS_BUCKET_NAME').strip()
+    GS_DEFAULT_ACL = 'publicRead'
+
+    DEFAULT_FILE_STORAGE = 'ChariLake.s3utils.MediaRootGoogleCloudStorage'
+    STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+    COLLECTFAST_THREADS = 20
 else:
-    STATIC_URL = '/static/'
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'static'),
-    ]
+    COLLECTFAST_ENABLED = False
 
 MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY")
