@@ -25,7 +25,7 @@
     {% block js %}{% endblock %}
     <script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
     <script src="https://kit.fontawesome.com/2242222cb3.js" crossorigin="anonymous"></script>
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5HFD24J5Q"></script>
     <script>
@@ -73,6 +73,9 @@
       />
     </noscript>
     <!-- End Facebook Pixel Code -->
-    
-  </body>
+
+    <!-- WhatsApp Widget -->
+{% include 'frontend/partial/whatsapp.html' %}
+    <!-- END of WhatsApp Widget -->
+</body>
 </html>
