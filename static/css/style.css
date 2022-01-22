@@ -12104,7 +12104,7 @@ ul li {
 }
 
 .transparent {
-    background-color: transparent;
+    background-color: #00000080;
     transition: background-color 200ms linear;
     color: #FAFAFA;
 }
@@ -12167,9 +12167,15 @@ i.fas {
     height: 100%;
 }
 
+.hero-text {
+    position: absolute;
+    right: 15%;
+    bottom: 13vh;
+}
+
 @media screen and (min-width: 1408px) {
     .hero-background {
-        object-fit: fill;
+        object-fit: cover;
     }
 }
 
