@@ -35,13 +35,15 @@ def contact_us(request):
                       })
             if resp.status_code == 200:
                 return render(request, "frontend/contact-us.html",
-                              context={"messages": [{"level": "is-success", "content": "Your inquiry was routed to management, We will reach back to you as soon as possible"}]})
+                              context={"messages": [{"level": "is-success",
+                                                     "content": "Your inquiry was routed to management, We will reach back to you as soon as possible"}]})
             else:
                 print(resp.text)
                 raise Exception(resp.text)
         except:
             return render(request, "frontend/contact-us.html",
-                          context={"messages": [{"level": "is-danger", "content": "Something went wrong, Try resubmitting or send a direct email to info@charilakehotel.lk"}]})
+                          context={"messages": [{"level": "is-danger",
+                                                 "content": "Something went wrong, Try resubmitting or send a direct email to info@charilakehotel.lk"}]})
     else:
         return render(request, "frontend/contact-us.html")
 
@@ -65,3 +67,7 @@ def room_chari_deluxe(request):
 
 def room_family_deluxe(request):
     return render(request, "frontend/rooms/family-deluxe.html")
+
+
+def room_chari_luxury(request):
+    return render(request, "frontend/rooms/chari-luxury.html")

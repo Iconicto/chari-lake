@@ -1,0 +1,92 @@
+{% extends 'frontend/base.html' %}
+
+{% load static %}
+{% block title %}Chari Luxury | {% endblock %}
+{% block content %}
+
+    <section class="section nav-margin">
+        <div class="container">
+            <div class="columns is-vcentered is-variable">
+                <div class="column pr-5">
+                    <h1 class="title is-size-4-mobile mb-3">
+                        Chari Luxury
+                    </h1>
+                    <p class="has-text-justified is-size-7-mobile mb-4">
+                        Spacious rooms, elegantly and tastefully furnished for your comfort. Private balcony facing the lake
+                    </p>
+                </div>
+                <div class="column">
+                    <figure class="image is-3by2">
+                        <img class="rounded-corners is-cover is-clickable"
+                             src="{% static 'img/rooms/chari-luxury/chari-luxury-room.jpg' %}"
+                             alt="Chari Deluxe Luxury" onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-vcentered is-mobile mb-2 mt-3">
+                <div class="column">
+                    <h1 class="title is-size-4-mobile">
+                        Gallery
+                    </h1>
+                </div>
+            </div>
+            <div class="columns is-multiline is-4">
+                <div class="column is-one-quarter">
+                    <figure class="image is-3by2 image-room is-clickable">
+                        <img class="rounded-corners is-cover" src="{% static 'img/rooms/chari-luxury/large-bed.jpg' %}"
+                             alt="large bed" onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+                <div class="column is-one-quarter">
+                    <figure class="image is-3by2 image-room is-clickable">
+                        <img class="rounded-corners is-cover" src="{% static 'img/rooms/chari-luxury/wash-room.jpg' %}"
+                             alt="wash room" onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+                <div class="column  is-one-quarter">
+                    <figure class="image is-3by2 image-room is-clickable">
+                        <img class="rounded-corners is-cover"
+                             src="{% static 'img/rooms/chari-luxury/view-from-bed.jpg' %}"
+                             alt="outside view from bed" onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+{#                <div class="column is-one-quarter">#}
+{#                    <figure class="image is-3by2 image-room is-clickable">#}
+{#                        <img class="rounded-corners is-cover" src="{% static 'img/rooms/chari-luxury/room-view.jpg' %}"#}
+{#                             alt="room view" onclick="showImage(this.src)"/>#}
+{#                    </figure>#}
+{#                </div>#}
+
+                <div class="column is-one-quarter ">
+                    <figure class="image is-3by2 image-room is-clickable">
+                        <img class="rounded-corners is-cover" src="{% static 'img/rooms/chari-luxury/view-from-wash-room.jpg' %}"
+                             alt="view from wash room" onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+
+                <div class="column is-half">
+                    <figure class="image is-3by1 image-room">
+                        <img class="rounded-corners is-cover is-clickable"
+                             src="{% static 'img/rooms/chari-luxury/room-380-view.jpg' %}" alt="360 view of the room"
+                             onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+                <div class="column is-half">
+                    <figure class="image is-3by1 image-room">
+                        <img class="rounded-corners is-cover is-clickable"
+                             src="{% static 'img/rooms/chari-luxury/outside-380.jpg' %}" alt="360 view from the balcony"
+                             onclick="showImage(this.src)"/>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'frontend/partial/amenities.html' %}
+    {% include 'frontend/partial/modal.html' %}
+{% endblock %}
