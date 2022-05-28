@@ -365,7 +365,7 @@ a strong {
 }
 
 a:hover {
-    color: #363636;
+    color: #4bcff;
 }
 
 code {
@@ -12104,7 +12104,7 @@ ul li {
 }
 
 .transparent {
-    background-color: #00000080;
+    background-color: #000000b2;
     transition: background-color 200ms linear;
     color: #FAFAFA;
 }
@@ -12169,8 +12169,8 @@ i.fas {
 
 .hero-text {
     position: absolute;
-    right: 15%;
-    bottom: 13vh;
+    right: 10%;
+    bottom: 9vh;
 }
 
 @media screen and (min-width: 1408px) {
